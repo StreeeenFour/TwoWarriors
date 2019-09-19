@@ -16,7 +16,7 @@ public class TwoWarriors extends javax.swing.JFrame {
     public static void main(String[] args) {        
         ArenaInterface A = new ArenaInterface();
         A.setVisible (true);
-        
+        System.out.println("Olá");
         
     }
     
