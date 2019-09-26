@@ -1,4 +1,4 @@
-public class Itens extends Personagens {
+public class Itens extends Personagem {
 
     int vidaInicial = 100;
     int vidaAtual1; //dos personagens
