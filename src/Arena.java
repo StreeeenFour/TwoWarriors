@@ -1,4 +1,4 @@
-import java.awt.Graphics;
+  import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -56,7 +56,7 @@ public class Arena extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent arg0) {
-        System.out.println("ACAO REALIZADA");
+        System.out.println("AÇAO REALIZADA");
         personagem.mexer();
         repaint();
 
