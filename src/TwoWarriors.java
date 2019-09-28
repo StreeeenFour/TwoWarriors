@@ -1,18 +1,18 @@
-
 import javax.swing.JFrame;
 
 
-public class TwoWarriors extends javax.swing.JFrame {
+public class TwoWarriors extends JFrame {
 
     public TwoWarriors() {
         
+        add(new Arena());
         //add(new JButton("Teste"));
         setTitle("TwoWarriors");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(550, 450);
+        setSize(500, 650);
         setLocationRelativeTo(null);//para tela aparecer no centro
         setResizable(false);//para o usuario não interferir na largura e altura do game
-        
+        setVisible(true);
     }
     
     
