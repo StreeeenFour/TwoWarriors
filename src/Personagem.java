@@ -21,19 +21,19 @@ public class Personagem {
         System.out.println(x + ", " + y);
 
         x += dx; //1 e 462 
-        y += dy; //1 e 340 essa é as coordenadas de até onde a nave vai
+        y += dy; //1 e 340 essa é as coordenadas de até onde o champ vai
 
         if (this.x < 1) {
             x = 1;
         }
-        if (this.x > 462) {
-            x = 462;
+        if (this.x > 360) {
+            x = 360;
         }
         if (this.y < 1) {
             y = 1;
         }
-        if (this.y > 340) {
-            y = 340;
+        if (this.y > 486) {
+            y = 486;
         }
     }
 
@@ -54,16 +54,16 @@ public class Personagem {
         int codigo = tecla.getKeyCode();
 
         if (codigo == KeyEvent.VK_UP) {
-            dy = -1;
+            dy = -2;
         }
         if (codigo == KeyEvent.VK_DOWN) {
-            dy = 1;
+            dy = 2;
         }
         if (codigo == KeyEvent.VK_LEFT) {
-            dx = -1;
+            dx = -2;
         }
         if (codigo == KeyEvent.VK_RIGHT) {
-            dx = 1;
+            dx = 2;
         }
 
     }
