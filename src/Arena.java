@@ -1,3 +1,4 @@
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -13,6 +14,7 @@ public class Arena extends JPanel implements ActionListener {
 
     private final Image arena;
     private final Personagem personagem;
+    private final Personagem personagem2;
     private final Timer timer;
 
     public Arena() {
@@ -37,8 +39,8 @@ public class Arena extends JPanel implements ActionListener {
 
         ImageIcon referencia = new ImageIcon("src/ImageDisplay/arena.jpg");
         arena = referencia.getImage();
-        personagem = new Personagem();
-
+        personagem = new Personagem();//aqui eu n vou precisar chamar pois ele vai ir automático
+        personagem2 = new Personagem(50, 50, "src/ImageDisplay/personagem.gif", 2);//ele vai alterar a posição inicial, ali decretou a posição inicial x e y e depois chamou o personagem.
         timer = new Timer(1, this);
         timer.start();
 
@@ -50,7 +52,7 @@ public class Arena extends JPanel implements ActionListener {
         Graphics2D graficos = (Graphics2D) g;
         graficos.drawImage(arena, 0, 0, null);
         graficos.drawImage(personagem.getImagem(), personagem.getX(), personagem.getY(), this);
-
+        graficos.drawImage(personagem2.getImagem(), personagem2.getX(), personagem2.getY(), this);
         g.dispose();
     }
 
@@ -58,6 +60,7 @@ public class Arena extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent arg0) {
         System.out.println("AÇAO REALIZADA");
         personagem.mexer();
+        personagem2.mexer();
         repaint();
 
     }
@@ -66,12 +69,13 @@ public class Arena extends JPanel implements ActionListener {
         // TODO add your handling code here:
         System.out.println("TECLADO APERTADO");
         personagem.keyPressed(evt);
+        personagem2.keyPressed(evt);
     }
 
     private void formKeyReleased(java.awt.event.KeyEvent evt) {
         // TODO add your handling code here:
         System.out.println("TECLADO SOLD");
         personagem.keyReleased(evt);
+        personagem2.keyReleased(evt);
     }
-
 }

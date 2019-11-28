@@ -9,7 +9,7 @@ public class TwoWarriors extends JFrame {
         //add(new JButton("Teste"));
         setTitle("TwoWarriors");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 650);
+        setSize(490,650);
         setLocationRelativeTo(null);//para tela aparecer no centro
         setResizable(false);//para o usuario não interferir na largura e altura do game
         setVisible(true);
