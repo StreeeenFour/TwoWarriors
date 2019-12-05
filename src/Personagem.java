@@ -38,7 +38,7 @@ public class Personagem {
         imagem = referencia.getImage();
 
         this.x = 210;
-        this.y = 300;
+        this.y = 600;
 
         this.id = id;
     }
