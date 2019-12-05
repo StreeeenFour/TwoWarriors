@@ -15,8 +15,9 @@ public class Personagem {
 
     private int altura, largura;
     private boolean isVisivel;
+    private Image atirar;
 
-    private List<jogo.Missel> misseis;
+    private List<jogo.Atirar> misseis;
 
     public Personagem() {
         ImageIcon referencia = new ImageIcon("src/ImageDisplay/personagem.gif");
@@ -25,7 +26,7 @@ public class Personagem {
         altura = imagem.getHeight(null);
         largura = imagem.getWidth(null);
 
-        misseis = new ArrayList<jogo.Missel>();
+        misseis = new ArrayList<jogo.Atirar>();
 
         this.x = 210;
         this.y = 50;
@@ -62,7 +63,7 @@ public class Personagem {
         }
     }
 
-    public List<jogo.Missel> getMisseis() {
+    public List<jogo.Atirar> getMisseis() {
         return misseis;
     }
 
@@ -87,7 +88,8 @@ public class Personagem {
     }
 
     public void atira() {
-        this.misseis.add(new jogo.Missel(x + largura, y + altura / 2));
+        this.misseis.add(new jogo.Atirar(x + largura, y + altura / 2));
+        
     }
 
     public Rectangle getBounds() {
@@ -100,6 +102,9 @@ public class Personagem {
 
         if (codigo == KeyEvent.VK_SPACE) {
             atira();
+                   ImageIcon referencia = new ImageIcon("src/ImageDisplay/arena.jpg");
+
+           
         }
 
         if (this.id == 1) {

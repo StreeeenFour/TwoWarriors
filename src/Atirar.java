@@ -5,9 +5,9 @@ import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
-public class Missel {
+public class Atirar {
 
-	private Image imagem;
+	private Image missel;
 	private int x, y;
 	private int largura, altura;
 	private boolean isVisivel;
@@ -15,16 +15,16 @@ public class Missel {
 	private static final int LARGURA_TELA = 500;
 	private static final int VELOCIDADE = 5;
 
-	public Missel(int x, int y) {
+	public Atirar(int x, int y) {
 
 		this.x = x;
 		this.y = y;
 
 		ImageIcon referencia = new ImageIcon("src/ImageDisplay/missel.png");
-		imagem = referencia.getImage();
+		missel = referencia.getImage();
                 
-		this.largura = imagem.getWidth(null);
-		this.altura = imagem.getHeight(null);
+		this.largura = missel.getWidth(null);
+		this.altura = missel.getHeight(null);
 		
 		isVisivel = true;
 	}
@@ -47,7 +47,7 @@ public class Missel {
 	}
 
 	public Image getImagem() {
-		return imagem;
+		return missel;
 	}
 
 	public int getX() {
